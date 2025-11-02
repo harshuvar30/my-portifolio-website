@@ -3,3 +3,17 @@
 html{
     scroll-behavior:smooth;
 }
+/* When parent is hovered, apply purple-blue gradient */
+.group:hover {
+  @apply bg-gradient-to-r from-purple-500/10 to-blue-500/10 ;
+}
+
+/* When child is hovered, parent goes back to default */
+.group:has(.child-hover:hover) {
+  @apply bg-none transform transition-colors duration-300 ease-in-out;
+}
+
+/* When child is hovered, apply different gradient */
+.group .child-hover:hover {
+  @apply bg-gradient-to-tr from-purple-600/10 to-blue-600/10 ;
+}
