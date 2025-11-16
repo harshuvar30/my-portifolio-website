@@ -1,12 +1,11 @@
-import { useState } from 'react'
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import About from './components/About'
-import Experience from './components/Experience'
-import Projects from './components/Projects'
+import Navbar from './pages/Navbar'
+import Hero from './pages/Hero'
+import About from './pages/About'
+import Experience from './pages/Experience'
+import Projects from './pages/Projects'
+import Skills from './pages/Skills'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
@@ -17,6 +16,7 @@ function App() {
           <About />
           <Experience />
           <Projects/>
+          <Skills />
         </div>
       </div>
     </>
