@@ -4,6 +4,7 @@ import About from './pages/About'
 import Experience from './pages/Experience'
 import Projects from './pages/Projects'
 import Skills from './pages/Skills'
+import Contact from './pages/Contact'
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
           <Experience />
           <Projects/>
           <Skills />
+          <Contact/>
         </div>
       </div>
     </>
