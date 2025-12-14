@@ -5,7 +5,7 @@ function Contact() {
     <div id="contact" className="w-full bg-white">
       <div className="container mx-auto flex-col justify-center items-center max-w-6xl space-y-8 p-24">
         <Heading title="Get In Touch" />
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 space-y-3 md:space-y-0">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 space-y-3 md:space-y-0">
           <div className="flex flex-col  space-y-6">
             <div className="">
               <h3 className="text-2xl font-semibold">Contact Information</h3>
@@ -72,6 +72,36 @@ function Contact() {
             <div className="text-gray-700 pt-4">
                 <p>I am always open to discussing new projects or opportunities, feel free to reach out!</p>
             </div>
+
+          </div>
+          <div className="bg-white drop-shadow-xl p-6">
+            <form className="space-y-4">
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="space-y-2">
+                  <label htmlFor="name" className="text-sm font-medium">Name</label>
+                  <input id="name" className="w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-600 translate-[1.02] transition-transform duration-300" type="text" required placeholder="Your Name" ></input>
+              </div>
+              <div className="space-y-2">
+                <label htmlFor="email" className="text-sm font-medium">Email</label>
+                <input id="email" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600 placeholder-gray-400" type="text" required placeholder="Your Email"></input>
+              </div>
+            </div>
+            <div className="space-y-2 ">
+              <label htmlFor="subject" className="text-sm font-medium">Subject</label>
+              <input id="subject" className="w-full px-3 py-2 border border-gray-300 placeholder-gray-400 rounded-md focus:ring-2 focus:ring-purple-600 focus:outline-none" required type="text" placeholder="Subject"></input>
+            </div>
+            <div className="space-y-2">
+              <label htmlFor="message" className="text-sm font-medium">Message</label>
+              <textarea id="message" rows={5} className="px-3 py-2   w-full border border-gray-300 rounded-md focus:ring-2 focus:ring-purple-600 focus:outline-none placeholder-gray-400 " typeof="text" required placeholder="Your Message"></textarea>
+            </div>
+            <div className="space-y-2 flex items-center justify-center bg-purple-500 hover:bg-purple-400 text-white w-full py-2 rounded-md hover:cursor-pointer hover:scale-[1.03] translateZ[0px] transition transform   duration-500 ease-in-out">
+              
+              <button className="w-full hover:cursor-pointer focus:outline-none" type="submit">
+                Submit Message              
+                </button>
+            </div>
+            </form>
 
           </div>
         </div>

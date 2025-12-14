@@ -19,7 +19,7 @@ function Navbar() {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 backdrop-blur-md ${
         scrolled
-          ? "bg-white/70 shadow-sm border-b border-gray-200/50"
+          ? "bg-white/70 shadow-sm border-gray-200/50"
           : "bg-transparent"
       }`}>
 
