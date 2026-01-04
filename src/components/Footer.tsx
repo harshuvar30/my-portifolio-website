@@ -3,7 +3,7 @@
 function Footer() {
   return (
     <div id="footer" className="w-full bg-gray-800 py-8 px-4">
-      <div className="container mx-auto flex-col justify-center items-center max-w-6xl space-y-3 px-24">
+      <div className="px-8 container mx-auto flex-col justify-center items-center max-w-6xl space-y-3 md:px-24">
         <div className="flex justify-between items-center w-full ">
           <div className="flex flex-col">
             <span className="text-2xl font-semibold text-white">
