@@ -4,7 +4,7 @@ function Hero() {
       id="hero"
       className="w-full bg-gray-50"
     >
-      <div className="ontainer mx-auto max-w-6xl relative z-10 bg-gray-50 flex-col justify-center items-center p-24 space-y-8">
+      <div className="p-8 pt-24 container mx-auto max-w-6xl relative z-10 bg-gray-50 flex-col justify-center items-center md:p-24 space-y-8">
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
           <div className="w-full md:w-1/2 space-y-6">
             <div className="flex flex-col">
@@ -51,13 +51,13 @@ function Hero() {
                 <span className="relative z-50">Get in touch</span>
               </a>
               <a
-                href="#contact"
+                href="#projects"
                 className="inset-ring-[.25px] inset-ring-gray-400  px-4 py-2  bg-white  rounded-md hover:bg-purple-200 hover:inset-ring-purple-100 transition duration-300 relative overflow-hidden"
               >
                 <span className="relative z-10">View Projects</span>
               </a>
               <a
-                href="#contact"
+                href=""
                 className="inline-flex items-center justify-center px-4 py-2 bg-gray-200  rounded-md hover:bg-purple-200 transition duration-300"
               >
                 <svg

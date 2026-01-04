@@ -1,7 +1,7 @@
 function Projects() {
   return (
     <div id="projects" className="w-full bg-white">
-      <div className="relative container mx-auto max-w-6xl flex-col justify-center items-center p-24 space-y-8">
+      <div className="relative p-8 pt-24 container mx-auto max-w-6xl flex-col justify-center items-center md:p-24 space-y-8">
         <div className="flex justify-center items-center">
           <h3 className="text-3xl font-bold">Featured Projects</h3>
         </div>

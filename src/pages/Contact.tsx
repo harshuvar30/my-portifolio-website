@@ -3,7 +3,7 @@ import Heading from "../components/Heading";
 function Contact() {
   return (
     <div id="contact" className="w-full bg-white">
-      <div className="container mx-auto flex-col justify-center items-center max-w-6xl space-y-8 p-24">
+      <div className="p-8 pt-24 container mx-auto flex-col justify-center items-center max-w-6xl space-y-8 md:p-24">
         <Heading title="Get In Touch" />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 space-y-3 md:space-y-0">
           <div className="flex flex-col  space-y-6">

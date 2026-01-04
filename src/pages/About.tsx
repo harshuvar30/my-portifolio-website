@@ -1,7 +1,7 @@
 function About() {
   return (
     <div id='about' className="w-full bg-white ">  
-    <div className="container mx-auto max-w-6xl relative z-10 bg-white flex-col justify-center items-center p-24 space-y-8">
+    <div className="p-8 pt-24 container mx-auto max-w-6xl relative z-10 bg-white flex-col justify-center items-center md:p-24 space-y-8">
       <div className="flex items-center justify-center">
         <span className="text-3xl font-bold">About Me</span>
       </div>
