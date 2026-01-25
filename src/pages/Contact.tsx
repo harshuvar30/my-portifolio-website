@@ -1,6 +1,61 @@
+import { useState } from "react";
 import Heading from "../components/Heading";
-
+import emailjs from '@emailjs/browser';
 function Contact() {
+  const service_id = import.meta.env.VITE_EMAILJS_SERVICE_ID
+  const template_id = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+  const public_key = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+type ContactFormData = {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+};
+const initialFormState: ContactFormData = {
+  name: "",
+  email: "",
+  subject: "",
+  message: "",
+};
+
+const [contactData, setContactData] = useState<ContactFormData>({...initialFormState});
+  
+  const handleChange = (
+  e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+) => {
+  const { name, value } = e.target;
+
+  setContactData(prev => ({
+    ...prev,
+    [name]: value,
+  }));
+};
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+  emailjs
+    .sendForm(
+      service_id,
+      template_id,
+      e.currentTarget,
+      {
+      publicKey:public_key,
+      limitRate:{
+      throttle:10000
+       }
+      })
+    .then(
+      (result) => {
+        console.log("Email sent:", result.text);
+        alert('Your mail is sent!');
+        setContactData(initialFormState); 
+      },
+      (error) => {
+        alert('Something went wrong!');
+        console.error("Email error:", error.text);
+      }
+    );
+};
   return (
     <div id="contact" className="w-full bg-white">
       <div className="p-8 pt-24 container mx-auto flex-col justify-center items-center max-w-6xl space-y-8 md:p-24">
@@ -75,25 +130,25 @@ function Contact() {
 
           </div>
           <div className="bg-white drop-shadow-xl p-6">
-            <form className="space-y-4">
+            <form className="space-y-4" onSubmit={handleSubmit}>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="space-y-2">
                   <label htmlFor="name" className="text-sm font-medium">Name</label>
-                  <input id="name" className="w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-600 translate-[1.02] transition-transform duration-300" type="text" required placeholder="Your Name" ></input>
+                  <input id="name" className="w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-600 translate-[1.02] transition-transform duration-300" name="name" value={contactData.name} onChange={handleChange} type="text" required placeholder="Your Name" ></input>
               </div>
               <div className="space-y-2">
                 <label htmlFor="email" className="text-sm font-medium">Email</label>
-                <input id="email" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600 placeholder-gray-400" type="text" required placeholder="Your Email"></input>
+                <input id="email" className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600 placeholder-gray-400" name="email" value={contactData.email} onChange={handleChange} type="text" required placeholder="Your Email"></input>
               </div>
             </div>
             <div className="space-y-2 ">
               <label htmlFor="subject" className="text-sm font-medium">Subject</label>
-              <input id="subject" className="w-full px-3 py-2 border border-gray-300 placeholder-gray-400 rounded-md focus:ring-2 focus:ring-purple-600 focus:outline-none" required type="text" placeholder="Subject"></input>
+              <input id="subject" className="w-full px-3 py-2 border border-gray-300 placeholder-gray-400 rounded-md focus:ring-2 focus:ring-purple-600 focus:outline-none" name="subject" value={contactData.subject} onChange={handleChange} required type="text" placeholder="Subject"></input>
             </div>
             <div className="space-y-2">
               <label htmlFor="message" className="text-sm font-medium">Message</label>
-              <textarea id="message" rows={5} className="px-3 py-2   w-full border border-gray-300 rounded-md focus:ring-2 focus:ring-purple-600 focus:outline-none placeholder-gray-400 " typeof="text" required placeholder="Your Message"></textarea>
+              <textarea id="message" rows={5} className="px-3 py-2   w-full border border-gray-300 rounded-md focus:ring-2 focus:ring-purple-600 focus:outline-none placeholder-gray-400 " name="message" value={contactData.message} onChange={handleChange} typeof="text" required placeholder="Your Message"></textarea>
             </div>
             <div className="space-y-2 flex items-center justify-center bg-purple-500 hover:bg-purple-400 text-white w-full py-2 rounded-md hover:cursor-pointer hover:scale-[1.03] translateZ[0px] transition transform   duration-500 ease-in-out">
               
