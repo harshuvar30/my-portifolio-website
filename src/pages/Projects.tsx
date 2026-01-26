@@ -24,7 +24,7 @@ function Projects() {
                     decoding="async"
                     data-nimg="fill"
                     className="object-cover"
-                    src="./public/Landing_page.png"
+                    src="./public/images/Landing_page.png"
                     style={{
                       height: "100%",
                       width: "100%",
@@ -102,7 +102,7 @@ function Projects() {
                     decoding="async"
                     data-nimg="fill"
                     className="object-cover"
-                    src="./public/Landing_page.png"
+                    src="./public/images/Landing_page.png"
                     style={{
                       height: "100%",
                       width: "100%",
@@ -180,7 +180,7 @@ function Projects() {
                     decoding="async"
                     data-nimg="fill"
                     className="object-cover"
-                    src="./public/Landing_page.png"
+                    src="./public/images/Landing_page.png"
                     style={{
                       height: "100%",
                       width: "100%",
@@ -258,7 +258,7 @@ function Projects() {
                     decoding="async"
                     data-nimg="fill"
                     className="object-cover"
-                    src="./public/Landing_page.png"
+                    src="./public/images/Landing_page.png"
                     style={{
                       height: "100%",
                       width: "100%",
