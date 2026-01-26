@@ -162,7 +162,7 @@ function Hero() {
                   inset: "0px",
                   color: "transparent",
                 }}
-                src="./public/images/my-profile-pic.jpeg"
+                src="/images/my-profile-pic.jpeg"
               ></img>
             </div>
           </div>
