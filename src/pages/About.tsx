@@ -29,14 +29,14 @@ function About() {
               for chatbot development and automation.
             </p>
           </div>
-          <div className="w-full md:w-1/2 space-y-2">
+          <div
+            className={`w-full md:w-1/2 space-y-2 horizontal-fade-in  ${isVisible ? "is-visible" : ""}`}
+            style={{ "--offset": "-5vw" } as CSSProperties}
+          >
             <div className="flex  text-2xl font-semibold pb-5">
               Key Expertise
             </div>
-            <div
-              className={`horizontal-fade-in ${isVisible ? "is-visible" : ""}`}
-              style={{ "--offset": "-5vw" } as CSSProperties}
-            >
+            <div className="">
               <ul className="space-y-4">
                 <li className="flex items-start group">
                   <svg
