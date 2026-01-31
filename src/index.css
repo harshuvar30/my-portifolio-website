@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
-html{
-    scroll-behavior:smooth;
+html {
+  scroll-behavior: smooth;
 }
 /* When parent is hovered, apply purple-blue gradient */
 .group:hover {
-  @apply bg-gradient-to-r from-purple-500/10 to-blue-500/10 ;
+  @apply bg-gradient-to-r from-purple-500/10 to-blue-500/10;
 }
 
 /* When child is hovered, parent goes back to default */
@@ -15,5 +15,96 @@ html{
 
 /* When child is hovered, apply different gradient */
 .group .child-hover:hover {
-  @apply bg-gradient-to-tr from-purple-600/10 to-blue-600/10 ;
+  @apply bg-gradient-to-tr from-purple-600/10 to-blue-600/10;
+}
+
+@keyframes zoom-settle {
+  0% {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+  35% {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  55% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+  75% {
+    transform: scale(0.99);
+  }
+  90% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-zoom-settle {
+  transition:
+    opacity 0.6s ease-out,
+    transform 1.2s ease-out;
+  animation: zoom-settle 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  will-change: opacity, visibility;
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(var(--offset, 4vh));
+  visibility: hidden;
+  transition:
+    opacity 1.5s ease-out,
+    transform 0.7s ease-out;
+  will-change: opacity, visibility;
+}
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+
+.horizontal-fade-in {
+  opacity: 0;
+  transform: translateX(var(--offset, 10vh));
+  visibility: hidden;
+  transition:
+    opacity 1.5s ease-out,
+    transform 0.7s ease-out;
+  will-change: opacity, visibility;
+}
+.horizontal-fade-in.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+
+.animate-typewriter {
+  overflow: hidden;
+  display: inline-block;
+  border-right: 0.15em solid transparent;
+  white-space: nowrap;
+  animation:
+    typing 3.5s steps(40, end) forwards,
+    blink-caret 0.75s step-end 8;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: currentColor;
+  }
 }

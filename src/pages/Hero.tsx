@@ -1,15 +1,18 @@
+import { useEffect, useState } from "react";
+
 function Hero() {
+  const [heroEffect, setHeroEffect] = useState(false);
+  useEffect(() => {
+    setHeroEffect(true);
+  }, []);
   return (
-    <section
-      id="hero"
-      className="w-full bg-gray-50"
-    >
+    <section id="hero" className="w-full bg-gray-50">
       <div className="p-8 pt-24 container mx-auto max-w-6xl relative z-10 bg-gray-50 flex-col justify-center items-center md:p-24 space-y-8">
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
           <div className="w-full md:w-1/2 space-y-6">
             <div className="flex flex-col">
               <div
-                className="inline-block text-4xl md:text-5xl font-bold tracking-tight"
+                className={`inline-block text-4xl md:text-5xl font-bold tracking-tight  fade-in-section ${heroEffect ? "is-visible" : ""}`}
                 style={{ opacity: 1 }}
               >
                 <span
@@ -20,12 +23,12 @@ function Hero() {
                 </span>
               </div>
               <div
-                className="inline-block    text-2xl md:text-3xl font-semibold mt-2 bg-linear-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent"
+                className="inline-block    text-2xl md:text-3xl font-semibold mt-2 bg-linear-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent animate-typewriter "
                 style={{ opacity: 1 }}
               >
                 <span
-                  className=" inline-block mr-1 overflow-hidden"
-                  style={{ opacity: 1, transform: "none" }}
+                  className="animate-typewriter  inline-block mr-1 overflow-hidden  transition "
+                  // style={{ opacity: 1, transform: "none" }}
                 >
                   Software Engineer
                 </span>
@@ -33,8 +36,8 @@ function Hero() {
               </div>
             </div>
             <div
-              className="text-lg  text-gray-600 "
-              style={{ opacity: 1, transform: "none" }}
+              className={`text-lg  text-gray-600 fade-in-section ${heroEffect ? "is-visible" : ""}`}
+              // style={{ opacity: 1, transform: "none" }}
             >
               Passionate about crafting efficient and scalable software
               solutions that drive innovation and deliver exceptional user
@@ -149,7 +152,7 @@ function Hero() {
             className="w-full md:w-1/2 flex justify-center"
             style={{ opacity: 1, transform: "none" }}
           >
-            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white  shadow-xl">
+            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white  shadow-xl animate-zoom-settle ease-out">
               <img
                 alt="Harshvardhan"
                 decoding="async"
@@ -167,18 +170,28 @@ function Hero() {
             </div>
           </div>
         </div>
-       <div className=" absolute bottom-8 left-1/2 transform -translate-x-1/2 hidden md:block animate-bounce">
-  <a href="#about" className="text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-         viewBox="0 0 24 24" fill="none" stroke="currentColor"
-         stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-         className="w-6 h-6">
-      <path d="M12 5v14"></path>
-      <path d="m19 12-7 7-7-7"></path>
-    </svg>
-  </a>
-</div>
-
+        <div className=" absolute bottom-8 left-1/2 transform -translate-x-1/2 hidden md:block animate-bounce">
+          <a
+            href="#about"
+            className="text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              className="w-6 h-6"
+            >
+              <path d="M12 5v14"></path>
+              <path d="m19 12-7 7-7-7"></path>
+            </svg>
+          </a>
+        </div>
       </div>
     </section>
   );
