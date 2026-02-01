@@ -1,0 +1,58 @@
+export const SkillsDetails = [
+  {
+    logo: "Dev",
+    skillHeading: "Language & Frameworks",
+    skillsName: [
+      "ReactJs",
+      "NodeJs",
+      "ExpressJs",
+      "SQL",
+      "PostgreSql",
+      "Prisma",
+      "MongoDB",
+      "REST APIs",
+    ],
+  },
+  {
+    logo: "OPS",
+    skillHeading: "Cloud & DevOps",
+    skillsName: [
+      "AWS",
+      "Microsoft-Azure",
+      "Docker",
+      "Kubernetes",
+      "IaC",
+      "CI/CD Pipelines",
+      "Shell Script",
+      "Trivy",
+    ],
+  },
+  {
+    logo: "BC",
+    skillHeading: "Blockchain Technologies",
+    skillsName: [
+      "Solana",
+      "PDAs",
+      "Wallet Adapter",
+      "Defi",
+      "Anchor",
+      "Indexing",
+      "Contracts",
+      "MPC & Shamirs",
+    ],
+  },
+  {
+    logo: "AI",
+    skillHeading: "AI & Machine Learning",
+    skillsName: [
+      "Machine Learning",
+      "NLP",
+      "Pytorch",
+      "Hugging Face",
+      "LLMs",
+      "Context Engineering",
+      "Agents",
+      "Finetuning",
+    ],
+  },
+];

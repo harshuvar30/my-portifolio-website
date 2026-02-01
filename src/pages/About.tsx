@@ -18,15 +18,20 @@ function About() {
               className={`text-lg  text-gray-700 horizontal-fade-in ${isVisible ? "is-visible" : ""}`}
               style={{ "--offset": "5vw" } as CSSProperties}
             >
-              I'm an AI Engineer with expertise in data science, machine
-              learning, and deep learning. My passion lies in building
-              intelligent systems that solve real-world problems. With a strong
-              background in predictive modeling, classification, and data
-              analysis, I specialize in developing and deploying AI solutions
-              that drive business value. I'm proficient in Python and ML
-              frameworks like TensorFlow, scikit-learn, and OpenCV, and have
-              experience integrating APIs like OpenAI, Gemini, and other LLMs
-              for chatbot development and automation.
+              I’m a Full-Stack Software Engineer with a strong focus on backend
+              systems, cloud architecture, and DevOps. I build scalable
+              microservices, automate infrastructure, and design reliable CI/CD
+              pipelines that support high-impact production workloads.
+            </p>
+
+            <p
+              className={`text-lg  text-gray-700 horizontal-fade-in ${isVisible ? "is-visible" : ""}`}
+              style={{ "--offset": "5vw" } as CSSProperties}
+            >
+              Beyond traditional web development, I actively work with AI
+              integrations and LLM-based solutions, and I’m currently learning
+              Blockchain and advanced AI concepts to broaden my skill set and
+              stay aligned with emerging technologies.
             </p>
           </div>
           <div
@@ -38,7 +43,7 @@ function About() {
             </div>
             <div className="">
               <ul className="space-y-4">
-                <li className="flex items-start group">
+                <li className="flex items-start ">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -49,15 +54,15 @@ function About() {
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    className="lucide lucide-chevron-right w-5 h-5 text-purple-600 mt-0.5 shrink-0 transform group-hover:translate-x-1 transition-transform duration-300"
+                    className="lucide lucide-chevron-right w-5 h-5 text-purple-600 mt-0.5 shrink-0 transform hover:translate-x-1 transition-transform duration-300"
                   >
                     <path d="m9 18 6-6-6-6"></path>
                   </svg>
                   <span className="text-gray-700 ">
-                    Machine Learning &amp; Deep Learning Model Development
+                    Backend &amp; Frontend Development, using NodeJs & React.
                   </span>
                 </li>
-                <li className="flex items-start group">
+                <li className="flex items-start">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -68,15 +73,16 @@ function About() {
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    className="lucide lucide-chevron-right w-5 h-5 text-purple-600 mt-0.5 shrink-0 transform group-hover:translate-x-1 transition-transform duration-300"
+                    className="lucide lucide-chevron-right w-5 h-5 text-purple-600 mt-0.5 shrink-0 transform hover:translate-x-1 transition-transform duration-300"
                   >
                     <path d="m9 18 6-6-6-6"></path>
                   </svg>
                   <span className="text-gray-700 ">
-                    Machine Learning &amp; Deep Learning Model Development
+                    Deploying applications on cloud platforms like AWS &amp;
+                    Azure.
                   </span>
                 </li>
-                <li className="flex items-start group">
+                <li className="flex items-start">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -87,15 +93,16 @@ function About() {
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    className="lucide lucide-chevron-right w-5 h-5 text-purple-600 mt-0.5 shrink-0 transform group-hover:translate-x-1 transition-transform duration-300"
+                    className="lucide lucide-chevron-right w-5 h-5 text-purple-600 mt-0.5 shrink-0 transform hover:translate-x-1 transition-transform duration-300"
                   >
                     <path d="m9 18 6-6-6-6"></path>
                   </svg>
                   <span className="text-gray-700 ">
-                    Machine Learning &amp; Deep Learning Model Development
+                    Containarization of applications using Docker &amp;
+                    deployment on Kubernetes.
                   </span>
                 </li>
-                <li className="flex items-start group">
+                <li className="flex items-start">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -106,12 +113,12 @@ function About() {
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    className="lucide lucide-chevron-right w-5 h-5 text-purple-600 mt-0.5 shrink-0 transform group-hover:translate-x-1 transition-transform duration-300"
+                    className="lucide lucide-chevron-right w-5 h-5 text-purple-600 mt-0.5 shrink-0 transform hover:translate-x-1 transition-transform duration-300"
                   >
                     <path d="m9 18 6-6-6-6"></path>
                   </svg>
                   <span className="text-gray-700 ">
-                    Machine Learning &amp; Deep Learning Model Development
+                    Working with event driven microservice architecture.
                   </span>
                 </li>
               </ul>

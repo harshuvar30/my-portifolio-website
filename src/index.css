@@ -64,6 +64,9 @@ html {
   transform: none;
   visibility: visible;
 }
+.fade-in-section.hover-effect {
+  @apply transition-transform duration-400 hover:-translate-y-2;
+}
 
 .horizontal-fade-in {
   opacity: 0;

@@ -17,7 +17,7 @@ function Experience() {
           <span className="text-3xl font-bold">Professional Experience</span>
         </div>
         <div
-          className={`bg-white border-l-4 border-purple-500 rounded-md p-6 shadow-md hover:-translate-y-1 transition-transform duration-300 fade-in-section ${isVisible ? "is-visible" : ""}`}
+          className={`bg-white border-l-4 border-purple-500 rounded-md p-6 shadow-md transition-transform  fade-in-section hover-effect  ${isVisible ? "is-visible" : ""}`}
           style={{ "--offset": "10vh" } as CSSProperties}
         >
           <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
@@ -30,11 +30,14 @@ function Experience() {
             <p className="text-lg text-gray-600">Sept 2024 - Present</p>
           </div>
           <div>
-            <ul className="list-disc list-inside space-y-2 text-gray-700">
-              <li>Worked on Cloud infra migration from AWS to Azure</li>
+            <ul className=" list-disc list-inside space-y-2 text-gray-700">
+              <li>Design & Implemented a centralized logger microservice</li>
+              <li>
+                Configured CI/CD pieplines on AWS & Azure to deploy
+                containarized applications{" "}
+              </li>
               <li>Worked on implementation & deployment of microservices</li>
-              <li>Worked on implementation & deployment of microservices</li>
-              <li>Worked on implementation & deployment of microservices</li>
+              <li>Implemented Infra as Code using Cloudformation on AWS</li>
             </ul>
           </div>
         </div>
