@@ -57,7 +57,7 @@ function Contact() {
   };
   const { ref, isVisible } = useInViewOnce();
   return (
-    <div id="contact" className="w-full bg-white">
+    <div id="contact" className="min-h-screen w-full bg-white">
       <div className="p-8 pt-24 container mx-auto flex-col justify-center items-center max-w-6xl space-y-8 md:p-24">
         <Heading title="Get In Touch" />
         <div

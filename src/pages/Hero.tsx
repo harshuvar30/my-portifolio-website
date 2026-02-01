@@ -6,7 +6,7 @@ function Hero() {
     setHeroEffect(true);
   }, []);
   return (
-    <section id="hero" className="w-full bg-gray-50">
+    <section id="hero" className="min-h-screen w-full bg-gray-50">
       <div className="p-8 pt-24 container mx-auto max-w-6xl relative z-10 bg-gray-50 flex-col justify-center items-center md:p-24 space-y-8">
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
           <div className="w-full md:w-1/2 space-y-6">

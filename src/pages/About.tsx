@@ -4,7 +4,7 @@ import { useInViewOnce } from "../hooks/useInViewOnce";
 function About() {
   const { ref, isVisible } = useInViewOnce();
   return (
-    <div ref={ref} id="about" className={`w-full bg-white  `}>
+    <div ref={ref} id="about" className={`min-h-screen w-full bg-white  `}>
       <div className="p-8 pt-24 container mx-auto max-w-6xl relative z-10 bg-white flex-col justify-center items-center md:p-24 space-y-8">
         <div
           className={`flex items-center justify-center fade-in-section ${isVisible ? "is-visible" : ""}`}

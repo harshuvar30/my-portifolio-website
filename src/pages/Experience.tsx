@@ -4,7 +4,7 @@ import { useInViewOnce } from "../hooks/useInViewOnce";
 function Experience() {
   const { ref, isVisible } = useInViewOnce();
   return (
-    <div className="w-full bg-gray-50">
+    <div className="min-h-screen w-full bg-gray-50">
       <div
         ref={ref}
         id="experience"
